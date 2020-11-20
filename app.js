@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		//столбик из четырех
 	
 		function checkColumnForFour() {
-			for (i = 0; i < 47; i++) {
+			for (i = 0; i < 39; i++) {
 				let columnOfFour = [i, i+width, i+width*2, i+width*3]
 				let decidedColor = squares[i].style.backgroundColor
 				const isBlank = squares[i].style.backgroundColor === ''
