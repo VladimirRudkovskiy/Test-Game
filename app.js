@@ -202,6 +202,47 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 		checkColumnForFour()
 
+		//Таймер
+
+		var pause = false; 
+
+  	var count = 60;
+ 	  var counter = setInterval(timer, 1000);
+
+  	function timer() {
+    	if (!pause) { //продолжать таймер если он не остановлен
+      count = count - 1;
+     	 if (count < 0) {
+				swal("Enter your name:", {
+					content: "input",
+				})
+				.then((value) => {
+					swal(`${value}, your score is: ` +score);
+					setTimeout(function(){
+						window.location.reload(1);
+				 }, 3000);
+				});
+				clearInterval(counter);
+				return;
+				
+			} 
+
+      document.getElementById("timer").innerHTML = count;
+    }
+	}
+
+	
+			document.getElementById('pause').addEventListener('click', function () {
+			pause = true;
+	});
+
+		document.getElementById('resume').addEventListener('click', function () {
+			pause = false;
+	});
+
+
+
+
 	window.setInterval(function(){
 		moveDown()
 		checkRowForFour()
