@@ -29,6 +29,7 @@ h3 {
 body {
 max-width: 1000vh;
 display: flex;
+background-image: url("background.png");
 }
 
 
@@ -69,14 +70,4 @@ display: flex;
   color: #85796b;
 }
 
-.buttons {
-	border-radius: 10px;
-  margin-top: 130px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-bottom: 350px;
-	
 
-	display: flex;
-  flex-direction: column;
-}
